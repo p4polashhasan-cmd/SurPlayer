@@ -69,7 +69,7 @@ fun EqScreen() {
         }
 
         Text("Bass boost", style = MaterialTheme.typography.labelLarge)
-        Slider(Fx.bass.toFloat(), { Fx.setBass(it.toInt()) }, valueRange = 0f..1000f)
+        Slider(Fx.bass.toFloat(), { Fx.updateBass(it.toInt()) }, valueRange = 0f..1000f)
 
         Text("Loudness gain", style = MaterialTheme.typography.labelLarge)
         Slider(Fx.gainMb.toFloat(), { Fx.setGain(it.toInt()) }, valueRange = 0f..1500f)
