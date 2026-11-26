@@ -81,9 +81,9 @@ object Fx {
         } catch (_: Throwable) {}
     }
 
-    fun reset() { levels.indices.forEach { setBand(it, 0) }; setBass(0); setGain(0) }
+    fun reset() { levels.indices.forEach { setBand(it, 0) }; updateBass(0); setGain(0) }
 
-    fun setBass(v: Int) {
+    fun updateBass(v: Int) {
         bass = v
         try { bassFx?.setStrength(v.toShort()) } catch (_: Throwable) {}
     }
